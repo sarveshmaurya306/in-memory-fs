@@ -3,6 +3,25 @@
 ## Description
 An in-memory file system to support various functionalities.
 
+## Implementation/ Logic
+The logic is to use object which is already there in the JavaScript world, using the key as a name and value as its content
+eg; 
+
+```javascript
+{
+    "/": {
+        "folder1": {
+            "folder-name.txt": "hello this is a folder",
+            "folder2-inside-folder1": {} //empty folder
+        },
+        "name.txt": "Hello this is a text file"
+    }
+}
+```
+- If any key contains the {} as its value that means it is a folder.
+- If any key contains the string as its value that means it is a file.
+
+
 ## Commands
 
 - #### mkdir: 
