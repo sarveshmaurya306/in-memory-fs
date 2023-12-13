@@ -85,7 +85,7 @@ Install dependencies
 Start the server
 
 ```bash
-  npm run start
+  node index.js
 ```
 
 #### After running this in local you will see the CLI like Interface in your terminal where you can interact there and can provide all the commands inside that
@@ -93,7 +93,7 @@ Start the server
 ## Bonus - Save and reload the state from a file
 if you want to save the state of the current in-memory-fs run the starting command as
 ```bash
-    npm run start --path=<your_path/your_memory_file_name.json>
+    node ./index.js --path=<your_path/your_memory_file_name.json>
 ```
 
 ## Authors
