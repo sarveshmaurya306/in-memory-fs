@@ -19,9 +19,11 @@ function setCurrDir(dir) {
 }
 
 function loadState(path) {
-    try {
-        savedData = readFileSync(path);
-    } catch (e) { }
+    if(path) {
+        try {
+            savedData = readFileSync(path);
+        } catch (e) { }
+    }
 }
 
 function setFileSystem(path) {
@@ -37,7 +39,8 @@ function setFileSystem(path) {
 }
 
 function saveCurrentDirState() {
-    writeFileSync(inMemoryPath, JSON.stringify(fileSystem));
+    if(inMemoryPath) 
+        writeFileSync(inMemoryPath, JSON.stringify(fileSystem));
 }
 
 function getDirData(dirObj, name) { // whole directory, and the path from which you are starting;
