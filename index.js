@@ -33,7 +33,7 @@ function main() {
         try {
             const userCommand = prompt(chalk.green.bold(`sarvesh@sarvesh.kumar.careers@gmail.com:/${pwd()}`) + '$ ');
             if (userCommand === null || userCommand === 'exit') {
-                if (isSaveData) {
+                if (argv.path) {
                     log(chalk.green.bold('data saving...'))
                     saveCurrentDirState();
                 }
@@ -118,6 +118,7 @@ function main() {
                     }
                     break;
                 }
+
                 //! extra functionality
                 case "pwd": {
                     log('/' + pwd())
@@ -142,7 +143,7 @@ function main() {
             }
         } catch (err) {
             console.log('err', err)
-            if (isSaveData) {
+            if (argv.path) {
                 log(chalk.green.bold('data saving...'))
                 saveCurrentDirState();
             }
