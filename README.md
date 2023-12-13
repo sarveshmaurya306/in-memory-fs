@@ -58,9 +58,12 @@ eg;
   ```mv /data/ice_cream/cassata.txt ./data/boring/ice_cream/mississippimudpie/```
 
 ## Run Locally
-To run this you must have Node installed in your PC.
-
 #### steps
+Install Node and NPM
+```bash
+Refer here: https://nodejs.org/en/download
+```
+
 Clone the project
 
 ```bash
