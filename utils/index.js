@@ -3,10 +3,10 @@ const chalk = require('chalk')
 
 const log = console.log;
 
-let fileSystem = {};
 let savedData = null;
 let inMemoryPath = null;
 
+let fileSystem = {};
 let currDirObjRef = {};
 let currDir = [];
 
